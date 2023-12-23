@@ -1,7 +1,7 @@
 # webProject
 This is source code of website that i write to manage it team requests from client
-purpose of this sit is to help it team with client request such as repair,hardware issue,and etc
-the site create from diff4rend pages that give user ability to create ticket manage them and check the ticket status
+purpose of this site is to help it team with client request such as repair,hardware issue,and etc
+the site create from differend pages that give user ability to create ticket manage them and check the ticket status
 and in other hand admin can see all tickets from users manage them write note for them and give each ticket status
 
 # Technology:
