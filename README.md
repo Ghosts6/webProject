@@ -12,6 +12,40 @@ And for front i used html/css/js
 # sit roadmap:
 our sit include from 10 diffrend pages for user and 2 pages for admin and some pages for error like 404 and lookout
 ![road map](https://github.com/Ghosts6/webProject/blob/main/Screenshot_20231223-111509_PowerPoint.jpg)
+# Directory Structure of Django Project 'myTicket':
+```bash
+virtual
+└── myTicket
+    ├── Ticket
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── custom_backend.py
+    │   ├── migrations
+    │   │   └── ...
+    │   ├── models.py
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
+    ├── myTicket
+    │   ├── __init__.py
+    │   ├── asgi.py
+    │   ├── settings.py
+    │   ├── static
+    │   │   ├── admin
+    │   │   ├── css
+    │   │   ├── favicon
+    │   │   ├── images
+    │   │   ├── js
+    │   │   └── static.json
+    │   ├── templates
+    │   ├── urls.py
+    │   ├── wsgi.py
+    │── fixtures
+    │   └── ... (contents of the fixtures folder)
+    └── db.sqlite3
+    └── manage.py
+```
 # code example:
 here we can saw one of our page layout:
 ![main.html](https://github.com/Ghosts6/webProject/blob/main/Screenshot_20231223-114607_Gallery.jpg)
