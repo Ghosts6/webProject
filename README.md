@@ -14,6 +14,7 @@ our sit include from 10 diffrend pages for user and 2 pages for admin and some p
 ![road map](https://github.com/Ghosts6/webProject/blob/main/Screenshot_20231223-111509_PowerPoint.jpg)
 # code example:
 here we can saw one of our page layout:
+![main.html](
 ```html
 
 ```
