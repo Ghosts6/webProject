@@ -8,7 +8,7 @@ and in other hand admin can see all tickets from users manage them write note fo
 For backend i used django which is python web frame work and to mange data i setup sql/sqllite nearby models.py 
 our project include one main project and one main application and another side application.
 And for front i used html/css/js
-
+![road map](https://github.com/Ghosts6/webProject/blob/main/Screenshot_20231223-112758_PowerPoint.jpg)
 # sit roadmap:
 our sit include from 10 diffrend pages for user and 2 pages for admin and some pages for error like 404 and lookout
 ![road map](https://github.com/Ghosts6/webProject/blob/main/Screenshot_20231223-111509_PowerPoint.jpg)
