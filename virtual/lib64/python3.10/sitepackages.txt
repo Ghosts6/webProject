@@ -1,0 +1,1 @@
+include pip pip 22.0.02 pkg setuptools setuptoolsinfo
