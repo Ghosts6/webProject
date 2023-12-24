@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png'%}">
+  <link rel="manifest" href="{% static 'favicons/site.webmanifest'%}">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="{% static 'css/login.css'%}">
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form" method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+ <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

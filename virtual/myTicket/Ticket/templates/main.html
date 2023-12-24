@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png'%}">
+  <link rel="manifest" href="{% static 'favicons/site.webmanifest'%}">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="{% static 'css/main.css'%}">
+</head>
+<body>
+  <!-- Clock at center top of the page -->
+  <div class="clock-container">
+    <div id="clock"></div>
+  </div>
+
+  <div class="main-container">
+    <h1>Welcome to IT Support</h1>
+    <p>If you need assistance, please submit an IT request:</p>
+    <form id="itRequestForm" class="it-request-form">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+          <label for="date">Date (Iran/Tehran Timezone):</label>
+          <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="departmentName">Department Name:</label>
+        <input type="text" id="departmentName" name="departmentName" required>
+      </div>
+      <div class="form-group">
+        <label for="requestType">Type of Request:</label>
+        <select id="requestType" name="requestType" required>
+          <option value="hardwareIssue">Hardware Issue</option>
+          <option value="softwareIssue">Software Issue</option>
+          <option value="updateUpgrade">Update & Upgrade</option>
+          <option value="installProgram">Install Program</option>
+          <option value="boostSystem">Boost System</option>
+          <option value="repair">Repair</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="workForce">How forceful is your work?</label>
+        <input type="range" id="workForce" name="workForce" min="0" max="10" step="1" value="5">
+      </div>
+      <div class="form-group">
+         <a class="redirect-button" href="{% url 'redirect' %}">Submit</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="{% static 'js/main.js' %}">"></script>
+</body>
+</html>

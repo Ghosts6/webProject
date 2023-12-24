@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading Page</title>
+  <!-- Link to your favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png'%}">
+  <link rel="manifest" href="{% static 'favicons/site.webmanifest'%}">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="{% static 'css/loading.css'%}">
+</head>
+<body class="loading-body">
+  <!-- Your HTML content -->
+  <div class="background"></div>
+  <div class="loading-container">
+    <div class="frame">
+      <div class="time" id="clock"></div>
+      <a class="create-ticket-button" href="{% url 'main' %}">Click button to create ticket!</a>
+    </div>
+  </div>
+  <!-- Link to your JavaScript file -->
+  <script src="{% static 'js/loading.js' %}"></script>
+</body>
+</html>
