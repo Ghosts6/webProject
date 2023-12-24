@@ -1,0 +1,61 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main background with gradient */
+body {
+  overflow: hidden;
+  background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Loading page styles */
+/* ... (previous styles remain the same) */
+
+/* Animation for moving background */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Colors */
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #060606; /* Darker Blue */
+  --black-color: black; /* Black */
+  --yellow-color: #FFD700; /* Yellow */
+}
+
+.lockout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.clock-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.iran-time {
+  font-size: 24px;
+  color: #333; /* Your clock color */
+  /* Other clock styles */
+}
+
+.lockout-message {
+  text-align: center;
+  color: red; /* Your message color */
+  /* Other styles for the lockout message */
+}

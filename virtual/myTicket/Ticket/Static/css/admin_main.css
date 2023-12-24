@@ -1,0 +1,89 @@
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main background with gradient */
+body {
+  overflow: hidden;
+  background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Loading page styles */
+/* ... (previous styles remain the same) */
+
+/* Animation for moving background */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Colors */
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #060606; /* Darker Blue */
+  --black-color: black; /* Black */
+  --yellow-color: #FFD700; /* Yellow */
+}
+/* Styles for admin page */
+.admin-container {
+  padding: 20px;
+  color: #fff;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.admin-table th, .admin-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.admin-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.logout-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF5733; /* Change background color as needed */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold; /* Optionally, make the text bold */
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #C70039; /* Change hover background color as needed */
+}
+

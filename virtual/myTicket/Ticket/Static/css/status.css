@@ -1,0 +1,101 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ticket-page {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.user-info {
+  text-align: left;
+}
+
+.clock {
+  text-align: center;
+}
+
+.main-content {
+  overflow-y: auto;
+}
+
+.ticket-list {
+  max-height: 400px; 
+  overflow-y: auto;
+  padding: 10px; 
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.ticket {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.logout-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #0056b3;
+}
+.logout-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF5733; /* Change background color as needed */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold; /* Optionally, make the text bold */
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #C70039; /* Change hover background color as needed */
+}
+

@@ -1,0 +1,100 @@
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main background with gradient */
+body {
+  overflow: hidden;
+  background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Colors */
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #060606; /* Darker Blue */
+  --black-color: black; /* Black */
+  --yellow-color: #FFD700; /* Yellow */
+}
+
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+.submitted-notification {
+  text-align: center;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 70%; 
+  margin: auto; 
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+.redirect-button {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the first button */
+.redirect-button:nth-of-type(1) {
+  background-color: #007bff;
+}
+
+/* Style for the second button */
+.redirect-button:nth-of-type(2) {
+  background-color: #28a745;
+}
+
+/* Hover effect for both buttons */
+.redirect-button:hover {
+  opacity: 0.8;
+}
