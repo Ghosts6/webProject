@@ -1,0 +1,1 @@
+this file create to collect static file with help of whitenoisepackage and python3 manage.py collectstatic command 
