@@ -1,0 +1,213 @@
+[2023-12-24 06:24:50] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2023-12-24 06:25:01] [ERROR] [django.request:241] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/wk/virtual/myTicket/Ticket/views.py", line 75, in login
+    return render(request, 'login.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 116, in render
+    url = self.url(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 113, in url
+    return self.handle_simple(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 513, in stored_name
+    raise ValueError(
+ValueError: Missing staticfiles manifest entry for 'favicons/apple-touch-icon.png'
+[2023-12-24 06:25:01] [ERROR] [django.server:212] "GET /login/ HTTP/1.1" 500 145
+[2023-12-24 06:27:24] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2023-12-24 06:27:28] [ERROR] [django.request:241] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/wk/virtual/myTicket/Ticket/views.py", line 75, in login
+    return render(request, 'login.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 116, in render
+    url = self.url(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 113, in url
+    return self.handle_simple(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 513, in stored_name
+    raise ValueError(
+ValueError: Missing staticfiles manifest entry for '/js/login.js'
+[2023-12-24 06:27:28] [ERROR] [django.server:212] "GET /login/ HTTP/1.1" 500 145
+[2023-12-24 06:27:32] [ERROR] [django.request:241] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/wk/virtual/myTicket/Ticket/views.py", line 75, in login
+    return render(request, 'login.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 116, in render
+    url = self.url(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 113, in url
+    return self.handle_simple(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 513, in stored_name
+    raise ValueError(
+ValueError: Missing staticfiles manifest entry for '/js/login.js'
+[2023-12-24 06:27:32] [ERROR] [django.server:212] "GET /login/ HTTP/1.1" 500 145
+[2023-12-24 06:30:44] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2023-12-24 06:30:49] [ERROR] [django.request:241] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/wk/virtual/myTicket/Ticket/views.py", line 75, in login
+    return render(request, 'login.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 116, in render
+    url = self.url(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 113, in url
+    return self.handle_simple(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 513, in stored_name
+    raise ValueError(
+ValueError: Missing staticfiles manifest entry for '/js/login.js'
+[2023-12-24 06:30:49] [ERROR] [django.server:212] "GET /login/ HTTP/1.1" 500 145
+[2023-12-24 06:30:52] [ERROR] [django.request:241] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/wk/virtual/myTicket/Ticket/views.py", line 75, in login
+    return render(request, 'login.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 116, in render
+    url = self.url(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 113, in url
+    return self.handle_simple(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 513, in stored_name
+    raise ValueError(
+ValueError: Missing staticfiles manifest entry for '/js/login.js'
+[2023-12-24 06:30:52] [ERROR] [django.server:212] "GET /login/ HTTP/1.1" 500 145
+[2023-12-24 06:32:39] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2023-12-24 06:32:44] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 1321
+[2023-12-24 06:32:44] [INFO] [django.server:212] "GET /static/css/login.19ea30002770.css HTTP/1.1" 200 571
+[2023-12-24 06:32:44] [INFO] [django.server:212] "GET /static/js/login.a36e0c5e077b.js HTTP/1.1" 200 475
+[2023-12-24 06:32:44] [INFO] [django.server:212] "GET /static/favicons/favicon-32x32.262285e58096.png HTTP/1.1" 200 1203
+[2023-12-24 06:33:02] [INFO] [django.server:212] "GET /login/admin_main.html HTTP/1.1" 200 1287
+[2023-12-24 06:33:02] [INFO] [django.server:212] "GET /static/css/admin_main.5ba354d829cc.css HTTP/1.1" 200 589
+[2023-12-24 06:33:02] [INFO] [django.server:212] "GET /static/js/admin_main.d0de0e09a055.js HTTP/1.1" 200 602
+[2023-12-24 06:33:04] [INFO] [django.server:212] "GET /admin/request/ HTTP/1.1" 200 1253
+[2023-12-24 06:33:04] [INFO] [django.server:212] "GET /static/css/admin_request.4dd98ee0a009.css HTTP/1.1" 200 545
+[2023-12-24 06:33:04] [INFO] [django.server:212] "GET /static/js/admin_request.38aa06df5c84.js HTTP/1.1" 200 199
+[2023-12-24 06:33:06] [INFO] [django.server:212] "GET /admin/request/admin_main.html HTTP/1.1" 200 1287
+[2023-12-24 06:33:08] [INFO] [django.server:212] "GET /admin/request/ HTTP/1.1" 200 1253
+[2023-12-24 06:33:09] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 1321
+[2023-12-24 06:35:23] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 1321
+[2023-12-24 06:35:26] [WARNING] [django.request:241] Not Found: /logindsdad/
+[2023-12-24 06:35:26] [WARNING] [django.server:212] "GET /logindsdad/ HTTP/1.1" 404 858
+[2023-12-24 06:35:26] [INFO] [django.server:212] "GET /static/css/404.618c67ee2366.css HTTP/1.1" 200 372
+[2023-12-24 06:38:30] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2023-12-24 06:38:35] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 1321
