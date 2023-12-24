@@ -1,0 +1,1 @@
+include js css img resource for django admin panel
