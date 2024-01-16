@@ -28,10 +28,22 @@ def admin_main(request):
     return render(request, 'your_app/all_tickets.html', {'all_tickets': all_tickets})
 
 def admin_request(request):   
-     return render(request, 'admin_request.html')
+     tickets = Ticket.objects.all()
+
+    if request.method == 'POST':
+        selected_ticket_id = request.POST.get('selected_ticket')
+        admin_note = request.POST.get('adminNote')
+        status = request.POST.get('status')
+
+        if selected_ticket_id:
+            selected_ticket = Ticket.objects.get(pk=selected_ticket_id)
+            selected_ticket.admin_note = admin_note
+            selected_ticket.status = status
+            selected_ticket.save()
+
+    return render(request, 'your_app/admin_management.html', {'tickets': tickets})
 
 def admin_redirect(request):
-    # Logic or processing can be added here if needed
     return render(request, 'admin_main.html')
 
 def custom_404_error_view(request, exception):
