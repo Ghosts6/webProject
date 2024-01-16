@@ -10,8 +10,8 @@ function updateClock() {
   clockElement.textContent = `Iran Time: ${iranTime}`;
 }
 
-// Update clock every second
+
 setInterval(updateClock, 1000);
 
-// Initial call to display the clock immediately
+
 updateClock();
