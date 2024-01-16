@@ -50,3 +50,22 @@ class LoginAttempt(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+class ITRequest(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    date = models.DateField()
+    department_name = models.CharField(max_length=255)
+    request_type = models.CharField(max_length=255, choices=[
+        ('hardwareIssue', 'Hardware Issue'),
+        ('softwareIssue', 'Software Issue'),
+        ('updateUpgrade', 'Update & Upgrade'),
+        ('installProgram', 'Install Program'),
+        ('boostSystem', 'Boost System'),
+        ('repair', 'Repair'),
+    ])
+    description = models.TextField()
+    work_force = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} - {self.request_type}"
