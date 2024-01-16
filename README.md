@@ -301,3 +301,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ```
+```python
+def main(request):
+    if request.method == 'POST':
+        form = ITRequestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('redirect')  # Replace 'redirect' with the actual name of your redirect view
+    else:
+        form = ITRequestForm()
+
+    return render(request, 'your_app/main.html', {'form': form})
+```
