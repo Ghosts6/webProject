@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selectedTicket) {
       selectedTicketID = selectedTicket.value;
       console.log('Selected Ticket ID:', selectedTicketID);
-      window.location.href = '/admin/request/'; // Modify this URL according to your Django URL configuration
+      window.location.href = '/admin/request/'; 
     } else {
       console.log('Please select a ticket.');
     }
