@@ -122,14 +122,13 @@ here we can saw one of our page layout:
 ```
 
 ```css
-/* Reset default margin and padding */
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
-/* Main background with gradient */
+
 body {
   overflow: hidden;
   background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
@@ -137,10 +136,6 @@ body {
   animation: gradientBG 15s ease infinite;
 }
 
-/* Loading page styles */
-/* ... (previous styles remain the same) */
-
-/* Animation for moving background */
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -152,7 +147,7 @@ body {
     background-position: 0% 50%;
   }
 }
-/* Colors */
+
 :root {
   --primary-color: #007bff; /* Blue */
   --secondary-color: #060606; /* Darker Blue */
@@ -160,7 +155,7 @@ body {
   --yellow-color: #FFD700; /* Yellow */
 }
 
-/* Center clock */
+
 .clock-container {
   display: flex;
   justify-content: center;
@@ -169,7 +164,7 @@ body {
   font-size: 24px;
 }
 
-/* Style the form */
+
 .main-container {
   max-width: 600px;
   margin: 0 auto;
@@ -179,7 +174,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style form fields */
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -197,7 +192,7 @@ textarea {
   width: 100%;
   padding: 8px;
   border-radius: 4px;
-  border: 1px solid #ccc; /* Light gray border */
+  border: 1px solid #ccc;
 }
 
 textarea {
@@ -215,7 +210,7 @@ textarea {
   transition: background-color 0.3s ease;
 }
 
-/* Style for hover effect */
+
 .redirect-button:hover {
   background-color: #0056b3;
 }
@@ -224,9 +219,9 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value for transparency */
+  background-color: rgba(255, 255, 255, 0.7); 
   position: relative;
-  z-index: 1; /* Place the confirmation container above the background */
+  z-index: 1; 
 }
 
 .submitted-notification {
@@ -234,15 +229,15 @@ textarea {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 70%; /* Adjust this width to your preference */
-  margin: auto; /* Center the container horizontally */
+  max-width: 70%;
+  margin: auto;
 }
 
 .add-request-link {
   display: block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: var(--primary-color); /* Blue */
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 4px;
@@ -253,7 +248,7 @@ textarea {
   display: block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: var(--primary-color); /*Blue */
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 4px;
@@ -261,7 +256,7 @@ textarea {
   transition: background-color 0.3s ease;
 }
 .add-request-link:hover {
-  background-color: var(--secondary-color); /* Darker Blue */
+  background-color: var(--secondary-color); 
 }
 
 
@@ -300,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Redirect to redirect.html upon successful validation
       window.location.href = "redirect.html";
     } else {
-      // If any of the required fields are empty, prevent form submission
+     
       alert('Please fill in First Name, Last Name, Department Name, and Date to submit.');
     }
   });
