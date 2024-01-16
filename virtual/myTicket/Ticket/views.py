@@ -9,7 +9,15 @@ def loading(request):
     return render(request, 'loading.html')
 
 def main(request):
-    return render(request, 'main.html')
+    if request.method == 'POST':
+        form = ITRequestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('redirect')  # Replace 'redirect' with the actual name of your redirect view
+    else:
+        form = ITRequestForm()
+
+    return render(request, 'your_app/main.html', {'form': form})
 
 def redirect(request):
     return render(request, 'redirect.html')
