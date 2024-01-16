@@ -10,22 +10,22 @@ def main(request):
         form = ITRequestForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('redirect')  # Replace 'redirect' with the actual name of your redirect view
+            return redirect('redirect') 
     else:
         form = ITRequestForm()
 
-    return render(request, 'your_app/main.html', {'form': form})
+    return render(request, 'Ticket/main.html', {'form': form})
 
 def redirect(request):
     return render(request, 'redirect.html')
 
 def status(request):
      user_tickets = Ticket.objects.filter(created_by=request.user)
-    return render(request, 'your_app/my_tickets.html', {'user_tickets': user_tickets})
+    return render(request, 'Ticket/my_tickets.html', {'user_tickets': user_tickets})
 
 def admin_main(request):
     all_tickets = Ticket.objects.all()
-    return render(request, 'your_app/all_tickets.html', {'all_tickets': all_tickets})
+    return render(request, 'Ticket/all_tickets.html', {'all_tickets': all_tickets})
 
 def admin_request(request):   
      tickets = Ticket.objects.all()
@@ -41,7 +41,7 @@ def admin_request(request):
             selected_ticket.status = status
             selected_ticket.save()
 
-    return render(request, 'your_app/admin_management.html', {'tickets': tickets})
+    return render(request, 'Ticket/admin_management.html', {'tickets': tickets})
 
 def admin_redirect(request):
     return render(request, 'admin_main.html')
