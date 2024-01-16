@@ -1,11 +1,11 @@
-/* Reset default margin and padding */
+
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
-/* Main background with gradient */
+
 body {
   overflow: hidden;
   background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
@@ -13,7 +13,7 @@ body {
   animation: gradientBG 15s ease infinite;
 }
 
-/* Animation for moving background */
+
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -26,7 +26,7 @@ body {
   }
 }
 
-/* Styles for admin management page */
+
 .admin-management-container {
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -110,7 +110,7 @@ button:hover {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  background-color: #4CAF50; /* Background color */
+  background-color: #4CAF50; 
   color: white;
   font-size: 16px;
   text-align: center;
@@ -119,5 +119,5 @@ button:hover {
 }
 
 .logout-button:hover {
-  background-color: #45a049; /* Hover background color */
+  background-color: #45a049; 
 }
