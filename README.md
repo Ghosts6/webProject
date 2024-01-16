@@ -65,7 +65,7 @@ here we can saw one of our page layout:
   <link rel="stylesheet" href="{% static 'css/main.css'%}">
 </head>
 <body>
-  <!-- Clock at center top of the page -->
+
   <div class="clock-container">
     <div id="clock"></div>
   </div>
@@ -149,10 +149,10 @@ body {
 }
 
 :root {
-  --primary-color: #007bff; /* Blue */
-  --secondary-color: #060606; /* Darker Blue */
-  --black-color: black; /* Black */
-  --yellow-color: #FFD700; /* Yellow */
+  --primary-color: #007bff;
+  --secondary-color: #060606; 
+  --black-color: black; 
+  --yellow-color: #FFD700; 
 }
 
 
@@ -169,7 +169,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9; /* Light gray */
+  background-color: #f9f9f9; 
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -266,33 +266,32 @@ textarea {
 document.addEventListener("DOMContentLoaded", function () {
   const itRequestForm = document.getElementById('itRequestForm');
 
-  // Function to get current Iran/Tehran time
+
   function getCurrentIranTime() {
     const options = { timeZone: 'Asia/Tehran', hour12: false, hour: 'numeric', minute: 'numeric', second: 'numeric' };
     return new Date().toLocaleTimeString('en-US', options);
   }
 
-  // Update clock every second
+  
   function updateClock() {
     const clockElement = document.getElementById('clock');
     clockElement.textContent = getCurrentIranTime();
   }
 
-  // Set up the clock interval
+  
   setInterval(updateClock, 1000);
 
   itRequestForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // Fetch form input values
+    
     const firstName = document.getElementById('firstName').value.trim();
     const lastName = document.getElementById('lastName').value.trim();
     const departmentName = document.getElementById('departmentName').value.trim();
     const date = document.getElementById('date').value.trim(); // Retrieve date value
 
-    // Check if required fields are filled
+    
     if (firstName !== '' && lastName !== '' && departmentName !== '' && date !== '') {
-      // Redirect to redirect.html upon successful validation
       window.location.href = "redirect.html";
     } else {
      
