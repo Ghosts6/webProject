@@ -307,7 +307,7 @@ def main(request):
         form = ITRequestForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('redirect')  # Replace 'redirect' with the actual name of your redirect view
+            return redirect('status')  
     else:
         form = ITRequestForm()
 
