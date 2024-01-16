@@ -4,7 +4,7 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-/* Main background with gradient */
+
 body {
   overflow: hidden;
   background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
@@ -12,10 +12,7 @@ body {
   animation: gradientBG 15s ease infinite;
 }
 
-/* Loading page styles */
-/* ... (previous styles remain the same) */
 
-/* Animation for moving background */
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -27,12 +24,12 @@ body {
     background-position: 0% 50%;
   }
 }
-/* Colors */
+
 :root {
-  --primary-color: #007bff; /* Blue */
-  --secondary-color: #060606; /* Darker Blue */
-  --black-color: black; /* Black */
-  --yellow-color: #FFD700; /* Yellow */
+  --primary-color: #007bff; 
+  --secondary-color: #060606; 
+  --black-color: black; 
+  --yellow-color: #FFD700; 
 }
 
 .lockout-container {
@@ -50,12 +47,12 @@ body {
 
 .iran-time {
   font-size: 24px;
-  color: #333; /* Your clock color */
-  /* Other clock styles */
+  color: #333; 
+
 }
 
 .lockout-message {
   text-align: center;
-  color: red; /* Your message color */
-  /* Other styles for the lockout message */
+  color: red; 
+  
 }
