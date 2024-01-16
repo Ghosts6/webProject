@@ -45,14 +45,6 @@ def admin_redirect(request):
     # Logic or processing can be added here if needed
     return render(request, 'admin_main.html')
 
-def create_ticket(request):
-    # Add logic for creating a new ticket
-    return render(request, 'create_ticket.html')
-
-def view_tickets(request):
-    # Add logic for viewing user's tickets
-    return render(request, 'view_tickets.html')
-
 def custom_404_error_view(request, exception):
     return render(request, '404.html', status=404)
 
