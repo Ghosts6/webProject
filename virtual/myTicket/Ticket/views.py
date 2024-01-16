@@ -24,8 +24,8 @@ def status(request):
     return render(request, 'your_app/my_tickets.html', {'user_tickets': user_tickets})
 
 def admin_main(request):
-    
-    return render(request, 'admin_main.html')
+    all_tickets = Ticket.objects.all()
+    return render(request, 'your_app/all_tickets.html', {'all_tickets': all_tickets})
 
 def admin_request(request):   
      return render(request, 'admin_request.html')
