@@ -14,18 +14,26 @@
 <body>
   <div class="admin-management-container">
     <div class="admin-answer">
-      <textarea id="adminNote" rows="4" placeholder="Write your note here..."></textarea>
-      <select id="status" name="status">
-      <option value="done">Done</option>
-      <option value="in-progress">In Progress</option>
-      <option value="not-seen">Not Seen</option>
-      </select>
-      <button onclick="submitAnswer()">Submit Answer</button>
-      <button onclick="redirectToAdminMain()">Tickets List</button>
+      <form method="post" action="{% url 'admin_management' %}">
+        {% csrf_token %}
+        <select id="selected_ticket" name="selected_ticket">
+          {% for ticket in tickets %}
+            <option value="{{ ticket.id }}">{{ ticket.title }}</option>
+          {% endfor %}
+        </select>
+        <textarea id="adminNote" name="adminNote" rows="4" placeholder="Write your note here..."></textarea>
+        <select id="status" name="status">
+          <option value="done">Done</option>
+          <option value="in-progress">In Progress</option>
+          <option value="not-seen">Not Seen</option>
+        </select>
+        <button type="submit">Submit Answer</button>
+      </form>
+      <a href="{% url 'admin_main' %}">Tickets List</a>
       <a class="logout-button" href="{% url 'login' %}">Logout!</a>
     </div>
   </div>
 
-  <script src="{%static 'js/admin_request.js'%}"></script>
+  <script src="{% static 'js/admin_request.js' %}"></script>
 </body>
 </html>
