@@ -307,9 +307,9 @@ def main(request):
         form = ITRequestForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('status')  
+            return redirect('redirect')  
     else:
         form = ITRequestForm()
 
-    return render(request, 'your_app/main.html', {'form': form})
+    return render(request, 'Ticket/main.html', {'form': form})
 ```
