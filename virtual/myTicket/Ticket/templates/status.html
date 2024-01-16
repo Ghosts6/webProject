@@ -15,7 +15,7 @@
   <div class="ticket-page">
     <div class="header">
       <div class="user-info">
-        <h2>User: John Doe</h2> 
+        <h2>User: {{ user.username }}</h2> 
       </div>
       <div class="clock">
         <span id="currentTime"></span>
@@ -24,6 +24,13 @@
     <div class="main-content">
       <h1>My Tickets</h1>
       <div class="ticket-list" id="ticketList">
+        {% for ticket in user_tickets %}
+          <div class="ticket-item">
+            <h3>{{ ticket.title }}</h3>
+            <p>{{ ticket.description }}</p>
+            <!-- Add other ticket details as needed -->
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -34,5 +41,4 @@
     <a class="logout-button" href="{% url 'login' %}">Logout</a>
 </nav>
 </html>
-
 
