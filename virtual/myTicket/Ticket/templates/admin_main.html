@@ -12,26 +12,31 @@
   <link rel="stylesheet" href="{% static 'css/admin_main.css' %}">
 </head>
 <body>
-  <div class="admin-container">
-    <h1>All Submitted Requests</h1>
-    <table class="admin-table">
-      <thead>
-        <tr>
-          <th>Select</th>
-          <th>Ticket ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Date & Time</th>
-          <th>Department</th>
-          <th>Request Type</th>
-          <th>Description</th>
-          <th>Priority</th>
-        </tr>
-      </thead>
-      <tbody id="adminTableBody">
-  
-      </tbody>
-    </table>
+  <div class="ticket-page">
+    <div class="header">
+      <div class="clock">
+        <span id="currentTime"></span>
+      </div>
+    </div>
+    <div class="main-content">
+      <h1>All Tickets</h1>
+      <div class="ticket-list" id="ticketList">
+        {% for ticket in all_tickets %}
+          <div class="ticket-item">
+            <h3>{{ ticket.title }}</h3>
+            <p>{{ ticket.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <script src="{% static 'js/status.js'%}"></script>
+</body>
+<nav>
+    <a class="logout-button" href="{% url 'login' %}">Logout</a>
+</nav>
+</html>
+
     <button onclick="getSelectedTicket()">Confirm</button>
   </div>
   <script src="{% static 'js/admin_main.js' %}"></script>
