@@ -46,7 +46,7 @@ virtual
     └── db.sqlite3
     └── manage.py
 ```
-# code example:
+# code sample:
 here we can saw one of our page layout:
 ![main.html](https://github.com/Ghosts6/webProject/blob/main/Screenshot_20231223-114607_Gallery.jpg)
 ```html
