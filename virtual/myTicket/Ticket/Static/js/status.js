@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to get current time in Tehran timezone and display it
+
   function getCurrentTimeInTehran() {
     const currentTimeElement = document.getElementById('currentTime');
     if (currentTimeElement) {
@@ -8,21 +8,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Update current time in Tehran timezone every second
+
   setInterval(getCurrentTimeInTehran, 1000);
 
-  // Function to display tickets
+
   function displayTickets() {
     const ticketListElement = document.getElementById('ticketList');
 
-    // Simulated ticket data (replace this with your actual data retrieval)
+  
     const ticketData = [
       { ticketNumber: 1, description: "This is the first ticket." },
       { ticketNumber: 2, description: "This is the second ticket." },
-      // Add more ticket objects as needed
+
     ];
 
-    // Loop through ticket data and create ticket elements
+
     ticketData.forEach(ticket => {
       const ticketElement = document.createElement('div');
       ticketElement.classList.add('ticket');
@@ -34,15 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Display tickets when the page loads
+
   displayTickets();
 
-  // Function to handle logout
+
   function logout() {
-    window.location.href = "login.html"; // Redirect to login page
+    window.location.href = "login.html";
   }
 
-  // Attach click event to the logout button
+ 
   const logoutButton = document.querySelector('.logout-button');
   if (logoutButton) {
     logoutButton.addEventListener('click', logout);
