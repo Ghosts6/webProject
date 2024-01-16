@@ -1,11 +1,11 @@
-/* Reset default margin and padding */
+
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
-/* Main background with gradient */
+
 body {
   overflow: hidden;
   background: linear-gradient(-45deg, #FFC300, #FF5733, #C70039, #900C3F, #581845);
@@ -24,12 +24,12 @@ body {
     background-position: 0% 50%;
   }
 }
-/* Colors */
+
 :root {
-  --primary-color: #007bff; /* Blue */
-  --secondary-color: #060606; /* Darker Blue */
-  --black-color: black; /* Black */
-  --yellow-color: #FFD700; /* Yellow */
+  --primary-color: #007bff; 
+  --secondary-color: #060606; 
+  --black-color: black; 
+  --yellow-color: #FFD700; 
 }
 
 .confirmation-container {
@@ -84,17 +84,17 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Style for the first button */
+
 .redirect-button:nth-of-type(1) {
   background-color: #007bff;
 }
 
-/* Style for the second button */
+
 .redirect-button:nth-of-type(2) {
   background-color: #28a745;
 }
 
-/* Hover effect for both buttons */
+
 .redirect-button:hover {
   opacity: 0.8;
 }
