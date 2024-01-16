@@ -5,9 +5,6 @@ from .models import LoginAttempt
 def loading(request):
     return render(request, 'loading.html')
 
-def loading(request):
-    return render(request, 'loading.html')
-
 def main(request):
     if request.method == 'POST':
         form = ITRequestForm(request.POST)
@@ -23,23 +20,15 @@ def redirect(request):
     return render(request, 'redirect.html')
 
 def status(request):
-    return render(request, 'status.html')
+     user_tickets = Ticket.objects.filter(created_by=request.user)
+    return render(request, 'your_app/my_tickets.html', {'user_tickets': user_tickets})
 
 def admin_main(request):
     
     return render(request, 'admin_main.html')
 
-def admin_main_view(request):
-    return render(request, 'admin_main.html')
-
-def admin_main(request):
-    return redirect('login')
-
 def admin_request(request):   
      return render(request, 'admin_request.html')
-
-def admin_request_view(request):
-    return render(request, 'admin_request.html')
 
 def admin_redirect(request):
     # Logic or processing can be added here if needed
