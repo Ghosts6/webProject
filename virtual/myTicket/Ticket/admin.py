@@ -8,7 +8,7 @@ admin.site.register(LoginAttempt)
 
 @admin.register(CustomUser)
 class CustomUserAdmin(admin.ModelAdmin):
-    list_display = ['username', 'email', 'is_active', 'is_staff']  # Customize the fields displayed in the list view
+    list_display = ['username', 'email', 'is_active', 'is_staff']  
 
     def __str__(self):
         return f"Login attempts for {self.username}"
