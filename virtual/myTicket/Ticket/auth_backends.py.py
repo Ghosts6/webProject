@@ -12,7 +12,6 @@ class ActiveDirectoryBackend(BaseBackend):
         conn = Connection(server, user='DOMAIN\\' + username, password=password, authentication=SIMPLE, auto_bind=True)
 
         if conn.bind():
-            # Check if the user already exists in Django's database
             user, created = User.objects.get_or_create(username=username)
             return user if created else None
 
